@@ -1,3 +1,5 @@
+//This is where you can list your skills that will appear below the about section
+
 const SkillList = [
   "next.js",
   "tailwind css",

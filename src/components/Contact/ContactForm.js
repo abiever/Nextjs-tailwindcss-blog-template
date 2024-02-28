@@ -2,6 +2,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
+//The below contact form was created with the help of useForm above
+
 export default function ContactForm() {
   const {
     register,

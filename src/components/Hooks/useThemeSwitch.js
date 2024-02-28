@@ -1,3 +1,5 @@
+//Used to switch between light and dark mode
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -15,6 +17,7 @@ export function useThemeSwitch() {
     window.localStorage.setItem(storageKey, theme);
   };
 
+  //will automatically set the theme to some user preference
   const getUserPreference = () => {
     const userPref = window.localStorage.getItem(storageKey);
     if (userPref) {

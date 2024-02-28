@@ -4,7 +4,7 @@
 import { makeSource, defineDocumentType } from "@contentlayer/source-files";
 import readingTime from "reading-time";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypePrettyCode from "rehype-pretty-code";
+import rehypePrettyCode from "rehype-pretty-code"; //helps with formatting code for markdown
 
 //The below two are helpful for formatting. Look up these libraries/plugins for better info
 import rehypeSlug from "rehype-slug";
@@ -58,6 +58,7 @@ const Blog = defineDocumentType(() => ({
       resolve: (doc) => readingTime(doc.body.raw)
     },
     toc:{
+      // This is to help with the Table of Contents
       type: "json",
       resolve: async (doc) => {
 

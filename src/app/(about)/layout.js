@@ -1,5 +1,6 @@
 import InsightRoll from "@/src/components/About/InsightRoll";
 
+//This creates the rolling stream of info that scrolls across the top of the about page
 
 const insights = [
     "20+ Projects Completed",

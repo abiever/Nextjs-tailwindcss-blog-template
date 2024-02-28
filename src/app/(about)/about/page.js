@@ -1,3 +1,5 @@
+//This is the about page
+
 import AboutCoverSection from "@/src/components/About/AboutCoverSection";
 import Skills from "@/src/components/About/Skills";
 import Link from "next/link";

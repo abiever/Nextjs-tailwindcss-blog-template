@@ -5,6 +5,7 @@ import { cx } from "@/src/utils"; //This function is used to help combine classN
 import { Inter, Manrope } from "next/font/google";
 import Header from "@/src/components/Header"; //The main Header shared across pages
 import Footer from "../components/Footer";
+//Helps with SEO
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 
@@ -37,6 +38,7 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  // Enables site to be scrolled by search engine robots
   robots: {
     index: true,
     follow: true,
@@ -68,6 +70,7 @@ export default function RootLayout({ children }) {
           "font-mr bg-light dark:bg-dark"
         )}
       >
+        {/* Dark Mode Engager */}
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark')

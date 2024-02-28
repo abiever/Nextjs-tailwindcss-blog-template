@@ -12,6 +12,7 @@ export async function generateStaticParams() {
   return allBlogs.map((blog) => ({ slug: blog._raw.flattenedPath }));
 }
 
+//Necesssary for SEO content
 export async function generateMetadata({ params }) {
   const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
   if (!blog) {
@@ -119,6 +120,7 @@ export default function BlogPage({ params }) {
       </div>
       <BlogDetails blog={blog} slug={params.slug} />
 
+      {/* Below is the Table of Contents */}
       <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
         <div className="col-span-12  lg:col-span-4">
           <details
@@ -126,7 +128,7 @@ export default function BlogPage({ params }) {
             open
           >
             <summary className="text-lg font-semibold capitalize cursor-pointer">
-              Table Of Content
+              Table Of Contents
             </summary>
             <ul className="mt-4 font-in text-base">
               {blog.toc.map((heading) => {
@@ -135,12 +137,7 @@ export default function BlogPage({ params }) {
                     <a
                       href={`#${heading.slug}`}
                       data-level={heading.level}
-                      className="data-[level=two]:pl-0  data-[level=two]:pt-2
-                                       data-[level=two]:border-t border-solid border-dark/40
-                                       data-[level=three]:pl-4
-                                       sm:data-[level=three]:pl-6
-                                       flex items-center justify-start
-                                       "
+                      className="data-[level=two]:pl-0  data-[level=two]:pt-2 data-[level=two]:border-t border-solid border-dark/40 data-[level=three]:pl-4 sm:data-[level=three]:pl-6 flex items-center justify-start"
                     >
                       {heading.level === "three" ? (
                         <span className="flex w-1 h-1 rounded-full bg-dark mr-2">

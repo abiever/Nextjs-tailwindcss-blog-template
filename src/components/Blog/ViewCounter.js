@@ -1,3 +1,5 @@
+// This is the view count number incrementer 
+
 "use client";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import React, { useEffect, useState } from "react";
@@ -8,6 +10,7 @@ const ViewCounter = ({ slug, noCount = false, showCount = true }) => {
   const [views, setViews] = useState(0);
 
   useEffect(() => {
+    // This is what "calls" the increment() function from our Supabase DB
     const incrementView = async () => {
       try {
         let { error } = await supabase.rpc("increment", {
@@ -31,6 +34,7 @@ const ViewCounter = ({ slug, noCount = false, showCount = true }) => {
     }
   }, [slug, noCount]);
 
+  // This will update the website's view counter to match the number from the DB
   useEffect(() => {
     const getViews = async () => {
       try {

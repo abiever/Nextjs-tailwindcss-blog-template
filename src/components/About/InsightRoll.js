@@ -1,5 +1,7 @@
 import React from "react";
 
+//This is the actual component that creates the scrolling roller at the top of the about page
+
 const InsightRoll = ({ insights }) => {
   return (
     <div className="w-full bg-accent dark:bg-accentDark text-light dark:text-dark whitespace-nowrap overflow-hidden">

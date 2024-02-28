@@ -1,3 +1,5 @@
+//USED FOR SEO PURPOSES
+
 // please update required information
 const siteMetadata = {
     title: 'Next.js Blog With Tailwind CSS and Contentlayer',

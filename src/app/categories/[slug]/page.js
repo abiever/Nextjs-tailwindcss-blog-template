@@ -1,3 +1,5 @@
+//This page helps create the necessary code to organize blogs by category and dislay a webpage with those articles
+
 import { allBlogs } from "@/.contentlayer/generated";
 import BlogLayoutThree from "@/src/components/Blog/BlogLayoutThree";
 import Categories from "@/src/components/Blog/Categories";
@@ -5,6 +7,8 @@ import GithubSlugger, { slug } from "github-slugger";
 
 const slugger = new GithubSlugger();
 
+//This creates params at build time?
+//Check out the docs on Next's website to learn more
 export async function generateStaticParams() {
   const categories = [];
   const paths = [{ slug: "all" }];
@@ -31,7 +35,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-
+// Will display all categories below 
 const CategoryPage = ({ params }) => {
   const allCategories = ["all"];
   const blogs = allBlogs.filter((blog) => {
