@@ -1,6 +1,9 @@
+// Use this footer section as an email sign up for my "freebie"?
+
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
+// https://react-hook-form.com/
 import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";

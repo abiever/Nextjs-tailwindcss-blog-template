@@ -1,3 +1,5 @@
+//This is the main Header that is shared across various pages
+
 "use client"
 import Link from "next/link";
 import Logo from "./Logo";
@@ -43,6 +45,7 @@ const toggle = () =>{
           </div>
         </button>
 
+        
         <nav className=" w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center flex  sm:hidden
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
         transition-all ease duration-300
@@ -82,6 +85,8 @@ const toggle = () =>{
                 }
             </button>
         </nav>
+        {/* SOCIAL LINKS BELOW */}
+        {/* the icons are imported from src\components\Icons.js*/}
         <div className=" hidden sm:flex items-center">
             <a href={siteMetadata.linkedin} className="inline-block w-6 h-6 mr-4" aria-label="Reach out to me via LinkedIn" target="_blank"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200" /></a>
             <a href={siteMetadata.twitter} className="inline-block w-6 h-6 mr-4" aria-label="Reach out to me via Twitter" target="_blank"><TwitterIcon className="hover:scale-125 transition-all ease duration-200" /></a>

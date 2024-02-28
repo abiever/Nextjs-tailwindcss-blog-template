@@ -1,7 +1,12 @@
+//The Logo component that is used in the top corner of the site
+
 import Image from "next/image"
 import Link from "next/link"
+//The above two are to help create hyperlinks and images within React using Next
+
 import profileImg from "@/public/keyboard-warrior-logo.png"
 
+//Edit the below to adjust the logo as needed
 const Logo = () => {
   return (
     <Link href="/" className="flex items-center text-dark dark:text-light">

@@ -1,3 +1,5 @@
+//BlogLayoutOne & BlogLayoutTwo help format the blogs that appear below the main cover section
+
 import React from "react";
 import Tag from "../Elements/Tag";
 import Link from "next/link";

@@ -1,11 +1,14 @@
+//This file helps control the overall layout/format of the site at large
+
 import "./globals.css";
-import { cx } from "@/src/utils";
+import { cx } from "@/src/utils"; //This function is used to help combine classNames
 import { Inter, Manrope } from "next/font/google";
-import Header from "@/src/components/Header";
+import Header from "@/src/components/Header"; //The main Header shared across pages
 import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 
+//Fonts that will be used for the website
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -58,8 +61,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={cx(
+          //These two variables are initialized above
           inter.variable,
           manrope.variable,
+          //'mr' stands for 'manrope'
           "font-mr bg-light dark:bg-dark"
         )}
       >
@@ -70,7 +75,8 @@ export default function RootLayout({ children }) {
     document.documentElement.classList.remove('dark')
   }`}
         </Script>
-        <Header />
+        {/* This is the main Header component below */}
+        <Header /> 
         {children}
         <Footer />
       </body>

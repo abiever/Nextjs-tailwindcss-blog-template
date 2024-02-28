@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // color themes to be used in the website
         dark: "#1b1b1b",
         light: "#fff",
         accent: "#7B00D3",
@@ -16,6 +17,7 @@ module.exports = {
         gray: "#747474",
       },
       fontFamily:{
+        //'mr' stands for 'manrope'
         mr: ["var(--font-mr)"],
         in: ["var(--font-in)"]
       },

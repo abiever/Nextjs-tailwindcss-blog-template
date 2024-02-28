@@ -1,3 +1,8 @@
+//This file contains ALL SVG type components for icons used throughout the site
+
+// https://react-svgr.com/playground/
+// The above site can/should be used to create React components for SVGs
+
 import React from "react";
 import { cx } from "../utils";
 

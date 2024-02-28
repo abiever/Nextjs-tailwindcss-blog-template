@@ -1,11 +1,18 @@
+//This file helps format the style of the blogs
+//See the docs from ContentLayer to see exactly what things like 'makeSource' are for
+
 import { makeSource, defineDocumentType } from "@contentlayer/source-files";
 import readingTime from "reading-time";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
+
+//The below two are helpful for formatting. Look up these libraries/plugins for better info
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+
 import GithubSlugger from "github-slugger"
 
+//defineDocumentType defines the schema for one particular doc type. It is used within the optoins for makeSource
 const Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: "**/**/*.mdx",

@@ -1,3 +1,5 @@
+//Gives the specific details on the blog such as view counts and time it takes to read it
+
 import { format, parseISO } from "date-fns";
 import Link from "next/link";
 import React from "react";

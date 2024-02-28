@@ -2,6 +2,7 @@ import { cx } from "@/src/utils";
 import Link from "next/link";
 import React from "react";
 
+// Helps make the Tagging process for articles more succinct when writing the code
 const Tag = ({ link = "#", name, ...props }) => {
   return (
     <Link

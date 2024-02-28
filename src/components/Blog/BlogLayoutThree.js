@@ -1,3 +1,5 @@
+//This is the formatting for "Recent Posts"
+
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";

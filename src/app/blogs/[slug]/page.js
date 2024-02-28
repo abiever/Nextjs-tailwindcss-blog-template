@@ -1,3 +1,5 @@
+//This file helps format the overall blog page, with emphasis on the URL slug
+
 import BlogDetails from "@/src/components/Blog/BlogDetails";
 import RenderMdx from "@/src/components/Blog/RenderMdx";
 import Tag from "@/src/components/Elements/Tag";

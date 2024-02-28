@@ -1,3 +1,5 @@
+//BlogLayoutOne & BlogLayoutTwo help format the blogs that appear below the main cover section
+
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
