@@ -20,11 +20,12 @@ const toggle = () =>{
   return (
     <header className="w-full p-4  px-5 sm:px-10 flex items-center justify-between">
         <Logo />
-
+        {/* button will be hidden on small screens */}
         <button className="inline-block sm:hidden z-50" onClick={toggle} aria-label="Hamburger Menu">
           <div className="w-6 cursor-pointer transition-all ease duration-300">
             <div className="relative">
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200" 
+            // adjusts the hamburger menu's line display
             style={{
              transform: click ? "rotate(-45deg) translateY(0)" : "rotate(0deg) translateY(6px)"
             }}
@@ -36,6 +37,7 @@ const toggle = () =>{
              }}
             >&nbsp;</span>
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
+            // adjusts the hamburger menu's line display
             style={{
               transform: click ? "rotate(45deg) translateY(0)" : "rotate(0deg) translateY(-6px)"
              }}
@@ -50,7 +52,7 @@ const toggle = () =>{
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
         transition-all ease duration-300
         "
-        style={{
+        style={{ //helps to bring menu to view when hamburger is clicked
           top: click ? "1rem" : "-5rem"
          }}
         
@@ -87,6 +89,7 @@ const toggle = () =>{
         </nav>
         {/* SOCIAL LINKS BELOW */}
         {/* the icons are imported from src\components\Icons.js*/}
+        {/* the 'dark:fill-light' sets the color for different mode of viewing */}
         <div className=" hidden sm:flex items-center">
             <a href={siteMetadata.linkedin} className="inline-block w-6 h-6 mr-4" aria-label="Reach out to me via LinkedIn" target="_blank"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200" /></a>
             <a href={siteMetadata.twitter} className="inline-block w-6 h-6 mr-4" aria-label="Reach out to me via Twitter" target="_blank"><TwitterIcon className="hover:scale-125 transition-all ease duration-200" /></a>

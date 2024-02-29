@@ -70,6 +70,9 @@ export default function BlogPage({ params }) {
         : blog.image;
   }
 
+  // This has something to do with Google SEO
+  // It would be worth rewatching the tutorial at: https://youtu.be/1QGLHOaRLwM?si=XC9DP6QTz3rcsXiO&t=25295
+  // Also, look at the documentation to understand this
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
